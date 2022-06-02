@@ -34,3 +34,18 @@ vid.oncanplay = function () {
 var canvas = document.getElementById('canvas1');
 var dataURL = canvas.toDataURL();
 document.getElementById('canvas1Ex').innerHTML = dataURL;
+
+
+// HTML canvas globalAlpha Property
+// EXAMPLE 1 ||
+var x = document.getElementById('canvas2');
+var xtx = x.getContext('2d');
+xtx.fillStyle = "red";
+xtx.fillRect(20, 20, 75, 50);
+
+// Turn transparency on
+xtx.globalAlpha = 0.2;
+xtx.fillStyle = "blue";
+xtx.fillRect(50, 50, 75, 50);
+xtx.fillStyle = "green";
+xtx.fillRect(80, 80, 75, 50);
