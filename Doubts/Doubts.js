@@ -19,3 +19,11 @@ window.onload = function () {
     var img = document.getElementById('scream');
     ctx.drawImage(img, 10, 10);
 }
+
+
+// HTML Audio / Video DOM canplay event
+// EXAMPLE 1 ||
+var vid = document.getElementById('myVideo');
+vid.oncanplay = function () {
+    alert("Can start playing video");
+}

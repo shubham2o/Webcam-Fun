@@ -127,6 +127,41 @@
     </canvas>
     <hr>
 
+    <!-- HTML Audio/Video DOM canplay Event -->
+    <h1>HTML Audio/Video DOM canplay Event</h1>
+    <p>• The canplay event occurs when the browser can start playing the specified audio/video (when it has buffered
+        enough to begin).</p>
+    <p>• During the loading process of an audio/video, the following events occur, in this order :
+        <br> 1. loadstart
+        <br> 2. durationchange
+        <br> 3. loadedmetadata
+        <br> 4. loadeddata
+        <br> 5. progress
+        <br> 6. canplay
+        <br> 7. canplaythrough
+    </p>
+    <p>• <i>SYNTAX :</i>
+        <br> |-- In HTML => element oncanplay = "myScript"
+        <br> |-- In JavaScript => object.oncanplay = function(){myScript};
+        <br> |-- In JavaScript, using the addEventListener() method => object.addEventListener("canplay", myScript);
+    </p>
+    <br>
+
+    <!-- EXAMPLE 1 || -->
+    <p>• <strong>EXAMPLE 1 ||</strong>
+        Alert that the video is ready to start playing :
+    </p>
+    <video id="myVideo" width="320" height="176" controls>
+        <source src="mov_bbb.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <p>Video courtesy of
+        <a href="https://www.bigbuckbunny.org/" target="_blank">
+            Big Buck Bunny
+        </a>
+    </p>
+    <hr>
+
     <script src="Doubts.js "></script>
 </body>
 
