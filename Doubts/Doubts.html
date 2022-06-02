@@ -48,6 +48,50 @@
         represents the HTML document loaded in that window.</p>
     <hr>
 
+    <!-- mediaDevices.getUserMedia() -->
+    <h1>mediaDevices.getUserMedia()</h1>
+    <p>• The mediaDevices.getUserMedia() method prompts the user for permission to use a media input which produces a
+        mediaStream with tracks containing the requested types of media.</p>
+    <p>• That stream a Promise that resolves to a mediaStream object. If the user denies permission, or matching media
+        is not available, then the promise is rejected with NotAllowedError or NotFoundError DOMException respectively.
+    </p>
+    <p>• It's possible for the returned promise to neither resolve nor reject, as the user is not required to make a
+        choice at all and may ignore the request.</p>
+    <p>• Generally, you will access the mediaDevices singleton object using navigator.mediaDevices, like this :
+        <br> async function getMedia(constraints){
+        <br> let stream = null;
+        <br>
+        <br> try {
+        <br> stream = await
+        <br> navigator.mediaDevices.getUserMedia(constraints);
+        <br> // use the stream
+        <br> } catch(err) {
+        <br> // handle the error
+        <br> }
+        <br> }
+    </p>
+    <p>• Similarly, using the raw promises directly, the code looks like this :
+        <br> navigator.mediaDevices.getUserMedia(constraints);
+        <br> .then(function(stream) {
+        <br> // use the stream
+        <br> })
+        <br> .catch(function(err) {
+        <br> // handle the error
+        <br> });
+    </p>
+    <p>• If the current document isn't loaded securely, navigator.mediaDevices will be undefined, and you cannot use
+        getUserMedia().</p>
+    <hr>
+
+    <!-- URL.createObjectURL() -->
+    <h1>URL.createObjectURL()</h1>
+    <p>• The URL.createObjectURL() static method creates a string containing a URL representing the object given in the
+        parameter.</p>
+    <p>• The URL lifetime is tied to the document in the window on which it was created. The new object URL represents
+        the specified File object or Blob object.</p>
+    <p>• To release an object URL, call revokeObjectURL().</p>
+    <hr>
+
     <script src="Doubts.js "></script>
 </body>
 
