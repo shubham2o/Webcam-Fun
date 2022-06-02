@@ -162,6 +162,39 @@
     </p>
     <hr>
 
+    <!-- HTMLCanvasElement.toDataURL() -->
+    <h1>HTMLCanvasElement.toDataURL()</h1>
+    <p>• The HTMLCanvasElement.toDataURL() method returns a data URL containing a representation of the image in the
+        format specified by the type parameter.</p>
+    <p>• The desired file format and image quality may be specified. If the file format is not specified, or if the
+        given format is not supported, then the data will be exported as image/png. In other words, if the returned
+        value starts with data:image/png for any other requested type, then that format is not supported.</p>
+    <p>• Browsers are required to support image/png; many will support additional formats including image/png and
+        image/webp.</p>
+    <p>• The created image data will have a resolution of 96dpi for file formats that supports encoding resolution
+        metadata.</p>
+    <p>• <i>Syntax</i>
+        <br> toDataUR()
+        <br> toDataURL(type)
+        <br> toDataURL(type, encoderOptions)
+    </p>
+    <p>• <i>Parameters</i>
+        <br> ||- type : A string indicating the image format. The default type is image/png; this image format will be
+        also used if the specified type is not supported.
+        <br> ||- encoderOptions : A number between 0 and 1 indicating the image quality to be used when creating images
+        using file formats that support lossy compression(such as image/jpeg or image/webp). A user agent will use its
+        default quality value if this option is not specified, or if the number is outside the allowed range.
+    </p>
+    <br>
+
+    <!-- EXAMPLE 1 || -->
+    <p>• <strong>EXAMPLE 1 ||</strong>
+        Given this canvas element, You can get a data-URL of the canvas with the following lines:
+    </p>
+    <p id="canvas1Ex"></p>
+    <canvas id="canvas1" width="5" height="5"></canvas>
+    <hr>
+
     <script src="Doubts.js "></script>
 </body>
 

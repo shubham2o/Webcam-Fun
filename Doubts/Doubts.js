@@ -27,3 +27,10 @@ var vid = document.getElementById('myVideo');
 vid.oncanplay = function () {
     alert("Can start playing video");
 }
+
+
+// HTMLCanvasElement.toDataURL()
+// EXAMPLE 1 ||
+var canvas = document.getElementById('canvas1');
+var dataURL = canvas.toDataURL();
+document.getElementById('canvas1Ex').innerHTML = dataURL;
